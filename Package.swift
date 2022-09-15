@@ -18,11 +18,29 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
+        .binaryTarget(
+            name: "FaceTecSDK",
+            path: "IdenfyLiveness/FaceTecSDK.xcframework"
+        )
+        .binaryTarget(
+            name: "idenfycore",
+            path: "IdenfyLiveness/idenfycore.xcframework"
+        )
+        .binaryTarget(
+            name: "IdenfyLiveness",
+            path: "IdenfyLiveness/IdenfyLiveness.xcframework"
+        )
+        .binaryTarget(
+            name: "idenfyNFCReading",
+            path: "IdenfyLiveness/idenfyNFCReading.xcframework"
+        )
+        .binaryTarget(
             name: "iDenfySDK",
-            dependencies: []),
-        .testTarget(
-            name: "iDenfySDKTests",
-            dependencies: ["iDenfySDK"]),
+            path: "IdenfyLiveness/iDenfySDK.xcframework"
+        )
+        .binaryTarget(
+            name: "idenfyviews",
+            path: "IdenfyLiveness/idenfyviews.xcframework"
+        )
     ]
 )
